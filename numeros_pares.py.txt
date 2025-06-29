@@ -1,0 +1,10 @@
+# Algoritmo 1: Números pares de 0 a 30, excluindo 10, 20 e 30
+
+print("Números pares de 0 a 30 (excluindo 10, 20 e 30):")
+for i in range(0, 31): # Percorre de 0 a 30
+    if i % 2 == 0: # Verifica se o número é par
+        if i == 10 or i == 20 or i == 30: # Verifica se é um dos números a serem excluídos
+            continue # Pula este número e vai para a próxima iteração
+        print(i)
+
+

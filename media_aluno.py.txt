@@ -1,0 +1,36 @@
+# Algoritmo 2: Cálculo da média do aluno com validação de notas
+
+print("--- Cálculo da Média do Aluno ---")
+
+# Solicita e valida a primeira nota
+nota1 = -1 # Inicializa com um valor inválido para entrar no loop
+while nota1 < 0 or nota1 > 10:
+    try:
+        nota1 = float(input("Digite a primeira nota (entre 0 e 10): "))
+        if nota1 < 0 or nota1 > 10:
+            print("Nota inválida! Digite um valor entre 0 e 10.")
+    except ValueError:
+        print("Entrada inválida! Digite um número.")
+
+# Solicita e valida a segunda nota
+nota2 = -1 # Inicializa com um valor inválido para entrar no loop
+while nota2 < 0 or nota2 > 10:
+    try:
+        nota2 = float(input("Digite a segunda nota (entre 0 e 10): "))
+        if nota2 < 0 or nota2 > 10:
+            print("Nota inválida! Digite um valor entre 0 e 10.")
+    except ValueError:
+        print("Entrada inválida! Digite um número.")
+
+# Calcula a média
+media = (nota1 + nota2) / 2
+
+print(f"\nPrimeira nota: {nota1}")
+print(f"Segunda nota: {nota2}")
+print(f"Média: {media:.2f}") # Exibe a média com duas casas decimais
+
+# Verifica se o aluno foi aprovado ou reprovado
+if media >= 6:
+    print("Situação: APROVADO!")
+else:
+    print("Situação: REPROVADO!")
